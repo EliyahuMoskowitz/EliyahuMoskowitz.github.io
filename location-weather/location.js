@@ -48,7 +48,7 @@
         units = unitInput.val();
         const apiKey = '560dcb7398e09264815a14af891179c4';
         let theUrl = zip ? `zip=${zip}` : `lat=${latitude}&lon=${longitude}`;
-        //fetch(`http://api.openweathermap.org/data/2.5/weather?appid=${apiKey}&zip=${zip}&units=imperial`)
+        //fetch(`https://api.openweathermap.org/data/2.5/weather?appid=${apiKey}&zip=${zip}&units=imperial`)
         fetch(`https://api.openweathermap.org/data/2.5/weather?${theUrl}&appid=${apiKey}&units=${units}`)
             .then(async r => {
                 if (!r.ok) {
