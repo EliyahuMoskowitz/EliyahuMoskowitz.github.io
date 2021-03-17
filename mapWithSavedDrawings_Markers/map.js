@@ -160,7 +160,7 @@ function initMap() {
             });
             marker.setTitle(theTitle);
             marker.setAnimation(google.maps.Animation.DROP);
-            fetch(`http://api.geonames.org/wikipediaSearch?q=${$('#search').val()}&maxRows=${$('#maxRows').val()}&username=${geoUser}&type=json`)
+            fetch(`https://api.geonames.org/wikipediaSearch?q=${$('#search').val()}&maxRows=${$('#maxRows').val()}&username=${geoUser}&type=json`)
                 .then(r => {
                     if (!r.ok) {
                         throw new Error(`${r.status} which means ${r.statusText}`);
