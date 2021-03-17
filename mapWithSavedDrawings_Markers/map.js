@@ -1,5 +1,5 @@
 /*global google*/
-const geoUser = 'EliyahuMoskowitz';
+const geoUser = 'eliyahu_moskowitz'; //'EliyahuMoskowitz';
 function initMap() {
     'use strict';
     let map, marker, location, origLoc, theTitle;
