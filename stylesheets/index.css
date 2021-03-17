@@ -9,11 +9,28 @@
     display: grid;
     grid-template-columns: 1fr 10fr;
 }
-aside > h2{
+#contactInfo{
+    color: darkblue;
+    font-family: cursive;
+    font-weight: bold;
+    font-style: italic;
+    padding: 15px;
+    border-right: 1px dotted dodgerblue;
+}
+#contactInfo > h2{
     text-align: center;
     color: green;
 }
-
+#contactInfo > a{
+    color: chocolate;
+    font-family: cursive;
+    font-weight: bold;
+    font-style: italic;
+    margin: 10px;
+}
+#contactInfo > a:hover{
+    color: yellow;
+}
 h1{
     color: blue;
     font-family: fantasy;
@@ -49,6 +66,10 @@ li > a:hover{
     color: blueviolet;
     font-style: italic;
     font-weight: 900;
+    font-size: 1.7rem;
+}
+#playGame:hover{
+    color: rgb(43, 168, 226);
 }
 #games{
     font-family: cursive;

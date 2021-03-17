@@ -8,6 +8,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;  */
 }
+#homeAnchor{
+  color: ghostwhite;
+  font-family: fantasy;
+}
+#homeAnchor:hover{
+  color: aqua;
+}
 .popUp{
 position: absolute;
 color: red;

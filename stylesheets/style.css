@@ -9,7 +9,7 @@ a {
 
 #homeAnchor{
   color: blue;
-  background-color: lightskyblue;
+  /* background-color: lightskyblue; */
   font-size: 1.25rem;
   font-family: cursive;
 }

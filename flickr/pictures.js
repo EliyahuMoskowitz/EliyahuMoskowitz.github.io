@@ -5,7 +5,7 @@
     const all = $('#all'), input = $('#tagName');
     let theCurrentPix, fetch, isNew;
     $('#button').click(() => {
-        $('#ch')[0].checked ? fetch = 'flickr.json' : fetch = `https://api.flickr.com/services/feeds/photos_public.gne?tags=${input.val()}&format=json&jsoncallback=?`;
+        /*$('#ch')[0].checked ? fetch = 'flickr.json' : */ fetch = `https://api.flickr.com/services/feeds/photos_public.gne?tags=${input.val()}&format=json&jsoncallback=?`;
         $.getJSON(fetch)
             .then(pics => {
                 isNew = true;

@@ -4,6 +4,13 @@ body {
     height: 100%;
     margin: 0;
 }
+#homeAnchor{
+    color: rgb(16, 16, 238);
+    font-family: fantasy;
+}
+#homeAnchor:hover{
+    color: aqua;
+}
 .popUp{
     position: absolute;
     color: red;
@@ -63,4 +70,11 @@ body {
     padding: 20px;
     width: 200px;
     /* height: 200px; */
+}
+main{
+    width: 65%;
+    margin: auto;
+    text-align: center;
+    color: brown;
+    font-family: cursive;
 }

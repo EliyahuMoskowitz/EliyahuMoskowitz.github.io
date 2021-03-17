@@ -9,6 +9,16 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+#homeAnchor{
+  position: absolute;
+  top: 70px;
+  color: rgb(16, 238, 83);
+  font-family: fantasy;
+  font-size: 1.3rem;
+}
+#homeAnchor:hover{
+  color: rgb(255, 0, 149);
+}
 #clearStorage{
     position: absolute;
     top: 100px;

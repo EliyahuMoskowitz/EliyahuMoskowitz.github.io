@@ -3,6 +3,14 @@ body{
     text-align: center;
     background-color: khaki;
 }
+#homeAnchor{
+    color: rgb(247, 26, 191);
+    font-family: fantasy;
+    font-size: 1.5rem;
+}
+#homeAnchor:hover{
+    color: aqua;
+}
 #find-me{
     color: aqua;
     background-color: black;

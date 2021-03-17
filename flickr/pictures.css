@@ -4,6 +4,13 @@ body{
     background-repeat: no-repeat;
     background-size: contain; */
 }
+#homeAnchor{
+    color: ghostwhite;
+    font-family: fantasy;
+}
+#homeAnchor:hover{
+    color: aqua;
+}
 header{
     background-color: brown;
     height: 3rem;
@@ -34,8 +41,16 @@ aside{
     color: darkmagenta;
     background-color: darkorange;
     font-family: monospace;
+    font-weight: bold;
+    font-style: italic;
     padding: 0.35rem;
     border: 5px dashed pink;
+    border-radius: 10px;
+}
+.options:hover{
+    color: darkorange;
+    background-color: darkmagenta;
+    border-color: aqua;
 }
 
 #button{
@@ -43,7 +58,12 @@ aside{
     background-repeat: no-repeat;
     width: 35px;
     height: 25px;
+    /* padding: 9px; */
 }
+#button:hover{
+    border-color: blue;
+}
+
 #all{
     margin: 3.2rem;
     display: grid;

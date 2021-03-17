@@ -4,7 +4,13 @@ div {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     padding: 55px;
 }
-
+#homeAnchor{
+    color: rgb(16, 16, 238);
+    font-family: fantasy;
+}
+#homeAnchor:hover{
+    color: aqua;
+}
 #apply {
     background-color: blue;
     color: chartreuse;
