@@ -161,7 +161,7 @@
             Ant.ants.forEach(ant => {
                 if (this.x === ant.x && this.y === ant.y && !this.isHome && !ant.goingHome) {
                     console.log('captured', ant, this);
-                    theNumbers.innerText = /*theNumbers.innerText + '\n'*/ + this.color + ' food captured by ' + ant.color + ' ant';
+                    theNumbers.innerText = /*theNumbers.innerText + '\n' + */ this.color + ' color food captured by ' + ant.color + ' color ant';
                     this.isHome = true;
                     ant.goingHome = true;
                     ant.noFood = 0;
