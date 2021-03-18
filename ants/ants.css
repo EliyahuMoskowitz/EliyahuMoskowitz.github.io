@@ -17,6 +17,14 @@ body {
     /* top: 10px;
     left: 100px; */
 }
+#console{
+    height: 90px;
+    overflow: auto;
+    color: hotpink;
+    background-color: indigo;
+    font-family: cursive;
+    text-align: center;
+}
 .controls{
     display: flex;
     justify-content: space-around;

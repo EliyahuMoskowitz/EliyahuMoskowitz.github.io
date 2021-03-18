@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    const canvas = document.getElementById('theCanvas'), intervalLength = 16.66,// home = document.getElementById('home');
+    const canvas = document.getElementById('theCanvas'), theNumbers = document.getElementById('console'), intervalLength = 16.66,// home = document.getElementById('home');
         homeRightX = 1250, homeRightY = 170, homeRightRadius = 50,
         homeLeftX = 100, homeLeftY = 170, homeLeftRadius = 50, midCanvas = 675, lengthOfPopUp = 12;
 
@@ -105,30 +105,37 @@
             Ant.ants.forEach(a => {
                 if (a.x === this.x && a.y === this.y && a.color !== this.color && !this.fighting) {
                     console.log('Ants before fight', Ant.ants.length);
+                    theNumbers.innerText = /*theNumbers.innerText + '\n*/ 'Ants before fight ' + Ant.ants.length;
                     this.fighting = true;
                     const fight = document.createElement('div'); fight.innerHTML = 'FIGHT'; fight.className = 'popUp';
                     fight.style.top = `${this.y}px`; fight.style.left = `${this.x}px`;
                     document.body.appendChild(fight);
                     if (this.strength > a.strength) {
-                        this.strength += a.strength; console.log('this Winner has', this.strength, 'strength'); //fight.innerHTML = `FIGHT! ${this.color} wins and ${a.color} dies!`;
+                        this.strength += a.strength;
                         Ant.ants = Ant.ants.filter(ant => ant !== a);
                         a.isDead = true;
+                         console.log('this Winner has', this.strength, 'strength'); //fight.innerHTML = `FIGHT! ${this.color} wins and ${a.color} dies!`;
+                        theNumbers.innerText = /*theNumbers.innerText + '\n*/ 'this Winner has ' + this.strength + ' strength\n' + `FIGHT! ${this.color} wins and ${a.color} dies!` + '\nAnts after fight ' + Ant.ants.length;
                     } else if (this.strength < a.strength) {
-                        a.strength += this.strength; console.log('a Winner has', a.strength, 'strength'); //fight.innerHTML = `FIGHT! ${a.color} wins and ${this.color} dies!`;
+                        a.strength += this.strength; 
                         Ant.ants = Ant.ants.filter(ant => ant !== this);
                         this.isDead = true;
+                        console.log('a Winner has', a.strength, 'strength'); //fight.innerHTML = `FIGHT! ${a.color} wins and ${this.color} dies!`;
+                        theNumbers.innerText = /*theNumbers.innerText + '\n*/ 'a Winner has ' + a.strength + ' strength\n' + `FIGHT! ${a.color} wins and ${this.color} dies!` + '\nAnts after fight ' + Ant.ants.length;
                     } else {
                         let random = Ant.getRandomNumber(0, 1), remove, winner;// ? this : a;
                         if (random) {
                             this.strength += a.strength; remove = a; winner = this;
                         } else { a.strength += this.strength; remove = this; winner = a; }
-                        console.log('this Winner has', winner.strength, 'strength(was random)'); //fight.innerHTML = `FIGHT! ${winner.color} wins and ${remove.color} dies!`;
                         Ant.ants = Ant.ants.filter(ant => ant !== remove);
                         remove.isDead = true;
+                        console.log('this Winner has', winner.strength, 'strength(was random)'); //fight.innerHTML = `FIGHT! ${winner.color} wins and ${remove.color} dies!`;
+                        theNumbers.innerText = /*theNumbers.innerText + '\n*/'this Winner has ' + winner.strength + ' strength (was random)\n' + `FIGHT! ${winner.color} wins and ${remove.color} dies!` + '\nAnts after fight ' + Ant.ants.length;
                     }
                     setTimeout(() => fight.remove(), intervalLength * lengthOfPopUp);
                     this.fighting = false;
                     console.log('Ants after fight', Ant.ants.length);
+                    // theNumbers.innerText = /*theNumbers.innerText +*/ '\nAnts after fight ' + Ant.ants.length;
                 }
             });
         }
@@ -154,6 +161,7 @@
             Ant.ants.forEach(ant => {
                 if (this.x === ant.x && this.y === ant.y && !this.isHome && !ant.goingHome) {
                     console.log('captured', ant, this);
+                    theNumbers.innerText = /*theNumbers.innerText + '\n'*/ + this.color + ' food captured by ' + ant.color + ' ant';
                     this.isHome = true;
                     ant.goingHome = true;
                     ant.noFood = 0;
@@ -181,6 +189,7 @@
                             setTimeout(() => eaten.remove(), intervalLength * lengthOfPopUp); this.isCleared = true;
                             Food.foods = Food.foods.filter(f => f !== this);
                             console.log('after HOME', Food.foods.length);
+                            theNumbers.innerText = theNumbers.innerText + '\nAfter deposit, there are ' + Food.foods.length + ' foods left.';
                             ant.goingHome = false;
                             clearInterval(intervalId);
                         }
