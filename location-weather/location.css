@@ -1,7 +1,9 @@
 body{
     width: 95%;
+    height: 820px;
     text-align: center;
     background-color: khaki;
+    background-image: linear-gradient(rgb(64, 205, 248), rgb(42, 223, 18),rgb(223, 238, 9));
 }
 #homeAnchor{
     color: rgb(247, 26, 191);
