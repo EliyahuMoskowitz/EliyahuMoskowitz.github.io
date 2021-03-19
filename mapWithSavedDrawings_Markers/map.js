@@ -50,8 +50,8 @@ function initMap() {
                     rectangles.push(bounds);  //rectangles.push(ev.overlay.bounds);
                     console.log(bounds);//console.log(ev.overlay.bounds);
                     localStorage.rectangles = JSON.stringify(rectangles);
-                    shapesRecord.append(`<div class="box"><span class="shapeName">Rectangle:</br></span><span class="special">East</span> ${/*bounds.getNorthEast()*/ ev.overlay.bounds.La.g}
-                    </br><span class="special">West</span> ${/*bounds.getNorthWest()*/ ev.overlay.bounds.La.i}</br><span class="special">North</span> ${/*bounds.getSouthEast()*/ ev.overlay.bounds.Sa.g}</br><span class="special">South</span> ${/*bounds.getSouthWest()*/ ev.overlay.bounds.Sa.i}</div>`);
+                    shapesRecord.append(`<div class="box"><span class="shapeName">Rectangle:</br></span><span class="special">North East</span> ${bounds.getNorthEast()/* ev.overlay.bounds.La.g*/}
+                    </br><span class="special">${'Center'/*'West'*/}</span> ${/*bounds.getNorthWest()*/ bounds.getCenter() /*ev.overlay.bounds.La.i*/}</br>${/*<span class="special">North</span> ${/*bounds.getSouthEast() ev.overlay.bounds.Sa.g*/''}</br><span class="special">South East</span> ${bounds.getSouthWest() /*ev.overlay.bounds.Sa.i*/}</div>`);
                     //map.panTo({ lat: /*bounds.getNorthWest()*/ ev.overlay.bounds.La.i, lng: /*bounds.getSouthWest()*/ ev.overlay.bounds.Sa.g }); 
                     break;
                 case 'polyline':
