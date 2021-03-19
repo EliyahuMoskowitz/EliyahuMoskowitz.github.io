@@ -8,6 +8,8 @@
                 linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%); */
     display: grid;
     grid-template-columns: 1fr 10fr;
+    border: 5px double purple;
+    border-radius: 5%;
 }
 #contactInfo{
     color: darkblue;
@@ -74,8 +76,15 @@ li > a:hover{
 #games{
     font-family: cursive;
     background-color: indigo;
+    border: 5px dotted darkgoldenrod;
+    border-radius: 15%;
     color: hotpink;
     font-style: italic;
     font-weight: 900;
     padding: 10px;
+}
+#games:hover{
+    background-color: pink;
+    color: indigo;
+    border-color: green;
 }
